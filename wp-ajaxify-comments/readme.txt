@@ -2,8 +2,8 @@
 Contributors: ronalfy
 Tags: AJAX, comments, lazy load, errors, refresh
 Requires at least: 5.0
-Tested up to: 6.7
-Stable tag: 3.0.3
+Tested up to: 6.8
+Stable tag: 3.1.1
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -126,6 +126,16 @@ Lazy Loading is an advanced topic, but we've put together <a href="https://docs.
 
 == Changelog ==
 
+= 3.1.1 =
+* Released 2025-05-10
+* Bug fix: Selector Helper wasn't working with newer Divi themes.
+* Bug fix: Selector Helper has updated styling for dark backgrounds.
+* Bug fix: Plugin installer on Integrations tab wasn't working due to a fatal error.
+* Bug fix: Skeleton Loader was mis-labeled in the admin.
+* Bug fix: z-index for overlay has been increased for compatibility with the Divi theme.
+* New: Setting Menu Helper is enabled by default. It's very useful for first-time setups and continued testing.
+* New: Added Comment shortcuts to Menu Helper for viewing comments in the admin.A
+
 = 3.0.3 =
 * Released 2024-11-28
 * Bug fix: resolving translation errors when loading too soon.
@@ -239,5 +249,5 @@ Lazy Loading is an advanced topic, but we've put together <a href="https://docs.
 
 == Upgrade Notice ==
 
-= 3.0.3 =
-Bug fix: resolving translation errors when loading too soon.
+= 3.1.1 =
+Selector Helper now works properly with newer Divi themes and has updated styling for dark backgrounds. The plugin installer on Integrations tab was fixed to resolve a fatal error. Skeleton Loader label was corrected in the admin. Setting Menu Helper is now enabled by default to help with first-time setups and testing. Added comment shortcuts to Menu Helper for viewing comments in the admin.
