@@ -1,19 +1,19 @@
-﻿=== Ajaxify Comments - Ajax and Lazy Loading Comments ===
+=== Ajaxify Comments - Ajax and Lazy Load Comments ===
 Contributors: ronalfy
-Tags: AJAX, comments, lazy load, errors, refresh
+Tags: ajax comments, comments, lazy load, comment form, auto-refresh
 Requires at least: 5.0
-Tested up to: 6.8
+Tested up to: 6.9
 Stable tag: 3.1.2
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Donate link: https://github.com/sponsors/DLXPlugins
 
-Ajaxify Comments hooks into native WordPress comments and allows comment posting without reloading the page.
+Ajaxify Comments hooks into the native WordPress comments system and allows comment posting without reloading the page.
 
 == Description ==
 
-Skip page reloads and separate error screens when posting comments. Ajaxify Comments hooks into your native WordPress comment system and allows comment posting without a page reload. Lazy loading is also supported, which can help speed up your page load time.
+Skip page reloads and separate error screens when posting comments. Ajaxify Comments hooks into your native WordPress comment system and allows comment posting without a page reload. Lazy load is also supported, which can help speed up your page load time.
 
 === TLDR ===
 
@@ -45,13 +45,14 @@ Here are some helpful links to help you get started with Ajaxify Comments (docs)
 
 Please use the native WordPress comment system with Ajaxify Comments.
 
-The plugin has integrations with:
+The plugin has integrations with and/or has been thoroughly tested with:
 
 1. <a href="https://wordpress.org/plugins/confetti/">Confetti</a> - Show confetti when a comment is posted.
 2. <a href="https://wordpress.org/plugins/simple-comment-editing/">Comment Edit Core</a> - Allow users to edit their comments.
 3. <a href="https://dlxplugins.com/plugins/comment-edit-pro/">Comment Edit Pro</a> - Add numerous utilities and automations to your comment section.
+4. <a href="https://wordpress.org/plugins/dco-comment-attachment/">DCO Comment Attachment</a>
 
-The following themes are supported out of the box:
+The following themes are supported out of the box and have been tested individually with the plugin:
 
 1. <a href="https://wordpress.org/themes/astra/">Astra</a>
 2. <a href="https://wordpress.org/themes/blocksy/">Blocksy</a>
@@ -60,13 +61,13 @@ The following themes are supported out of the box:
 5. <a href="https://wordpress.org/themes/ollie/">Ollie</a>
 6. <a href="https://wordpress.org/themes/generatepress/">GeneratePress</a>
 7. <a href="https://wordpress.org/themes/neve/">Neve</a>
-8. Twenty Ten - Twenty Twenty Three
+8. Twenty Ten - Twenty Twenty Five
 
 Ajaxify Comments should be compatible with most block themes. If <a href="https://docs.dlxplugins.com/v/ajaxify-comments/first-time-users/menu-helper">Menu Helper</a> can't find the selectors, please leave a support request.
 
 === Technical Note ===
 
-Since the plugin hooks into the theme on client-side to intercept the comment form submit process, and to add new comments without reloading the page, the plugin needs to access the DOM nodes using jQuery selectors. The plugin comes with default values for these selectors that were successfully tested with WordPress' default themes "Twenty Ten", "Twenty Eleven", "Twenty Twelve", "Twenty Thirteen", "Twenty Fourteen", "Twenty Fifteen", "Twenty Sixteen". If required, the selectors can be customized to match your theme in the plugin's settings.
+Since the plugin hooks into the theme on client-side to intercept the comment form submit process, and to add new comments without reloading the page, the plugin needs to access the DOM nodes using JavaScript selectors. The plugin comes with default values for these selectors that were successfully tested with WordPress' default themes "Twenty Ten", "Twenty Eleven", "Twenty Twelve", "Twenty Thirteen", "Twenty Fourteen", "Twenty Fifteen", "Twenty Sixteen". If required, the selectors can be customized to match your theme in the plugin's settings.
 
 > <a href="https://docs.dlxplugins.com/v/ajaxify-comments/first-time-users/menu-helper">Menu Helper</a> is available to help you find the theme's selectors.
 
@@ -77,13 +78,16 @@ Ajaxify Comments is community supported. If you would like to add or change anyt
 * Post comments without a page reload.
 * Show error messages without a page reload.
 * Lazy load comments, compatible with most themes, including block theme and inline loading.
-* Automatically refresh comments.
-* Comment form validation.
+* Several types of lazy load options are available: load in DOM element, use a button to load comments, show a loading spinner, or show a loading skeleton.
+* Automatically refresh comments if enabled via admin option.
+* Comment form validation and error checking without refreshing the page.
 * Support for pages with multiple comment forms.
+* Support for multiple comment sections.
 * Support for threaded and moderated comments.
 * Compatible with most spam plugins.
-* Menu Helper to help you find the right selectors for your theme.
-* Appearance preview to see how the plugin will look on your site.
+* Compatible with image and comment attachment plugins.
+* Menu Helper can help you find the right selectors for your theme.
+* An Appearance preview is available to see how the plugin will look on your site.
 * Simulate Ajaxify Comments enabled or disabled for testing and to compare the difference.
 * Translate and customize the default WordPress comment messages.
 
@@ -96,6 +100,8 @@ Please use the <a href="https://wordpress.org/support/plugin/wp-ajaxify-comments
 === Credits ===
 
 This plugin was initially developed by Jan Jonas starting in 2012. Company <a href="https://weweave.net/">weweave</a> maintained the plugin from 2014-2022. The plugin is currently supported by Ronald Huereca of <a href="https://dlxplugins.com">DLX Plugins</a>.
+
+❤️ Show your continued support for this plugin by your kind review/testimonial.
 
 == Installation ==
 
