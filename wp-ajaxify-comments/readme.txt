@@ -1,19 +1,19 @@
 ﻿=== Ajaxify Comments - Ajax and Lazy Loading Comments ===
 Contributors: ronalfy
 Tags: AJAX, comments, lazy load, errors, refresh
-Requires at least: 5.0
-Tested up to: 6.9
-Stable tag: 3.2.0
+Requires at least: 6.5
+Tested up to: 7.0
+Stable tag: 3.2.2
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Donate link: https://github.com/sponsors/DLXPlugins
 
-Ajaxify Comments hooks into native WordPress comments and allows comment posting without reloading the page.
+Ajaxify Comments speeds up your comment section, allowing for lazy loading comments, instant comment posting, and seamless success and error messages.
 
 == Description ==
 
-Skip page reloads and separate error screens when posting comments. Ajaxify Comments hooks into your native WordPress comment system and allows comment posting without a page reload. Lazy loading is also supported, which can help speed up your page load time.
+Skip page reloads and separate error screens when posting comments. Ajaxify Comments hooks into your native WordPress comment system and allows comment posting without a page reload. Lazy loading comments is also supported, which can help speed up your page load time.
 
 === TLDR ===
 
@@ -89,7 +89,7 @@ Ajaxify Comments is community supported. If you would like to add or change anyt
 
 === Questions/Help? ===
 
-Please use the <a href="https://wordpress.org/support/plugin/wp-ajaxify-comments">support forum</a> to ask questions or to report issues.
+Please use the <a href="https://wordpress.org/support/plugin/wp-ajaxify-comments">support forum</a> to ask questions or to report issues. If you don't want to create an account to leave a support request, please use <a href="https://dlxplugins.com/support/">my support form</a>.
 
 > Most questions can be resolved by checking out our docs site. <a href="https://docs.dlxplugins.com/v/ajaxify-comments">https://docs.dlxplugins.com/v/ajaxify-comments</a> - the Search is AI, so it should be able to find what you're looking for.
 
@@ -125,6 +125,10 @@ More than likely you need to set up your selectors. <a href="https://docs.dlxplu
 Lazy Loading is an advanced topic, but we've put together <a href="https://docs.dlxplugins.com/v/ajaxify-comments/advanced-topics/lazy-loading-comments">a guide to help you understand how to enable lazy loading</a>.
 
 == Changelog ==
+
+= 3.2.2 =
+* Released 2026-04-05
+* Fixing bug a bug where selectors could render as data, attaching a click event to document links, rendering them unclickable. Props to <a href="https://mentionlink.com/">paul@mentionlink</a> for finding this bug.
 
 = 3.2.0 =
 * Released 2026-02-19
@@ -258,5 +262,5 @@ Lazy Loading is an advanced topic, but we've put together <a href="https://docs.
 
 == Upgrade Notice ==
 
-= 3.2.0 =
-Security fix: Resolved header injection security issue, as well as doing some hardening to prevent future issues.
+= 3.2.1 =
+Fix for potential link overrides (rendering certain links unclickable) if certain selectors are rendered as data. Props to paul@mentionlink for pointing out the bug.
