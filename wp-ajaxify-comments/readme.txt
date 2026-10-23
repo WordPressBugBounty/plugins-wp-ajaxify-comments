@@ -1,8 +1,8 @@
-﻿=== Ajaxify Comments - Ajax and Lazy Loading Comments ===
+=== Ajaxify Comments - Ajax and Lazy Loading Comments ===
 Contributors: ronalfy
 Tags: AJAX, comments, lazy load, errors, refresh
 Requires at least: 6.5
-Tested up to: 7.0
+Tested up to: 7.1
 Stable tag: 3.2.2
 Requires PHP: 7.2
 License: GPLv2 or later
