@@ -338,7 +338,7 @@ class Menu_Helper {
 	/**
 	 * Add the admin bar menu.
 	 *
-	 * @param WP_Admin_Bar $admin_bar Admin bar reference.
+	 * @param \WP_Admin_Bar $admin_bar Admin bar reference.
 	 */
 	public function admin_bar_menu( $admin_bar ) {
 		// Only load on singular and page types.
@@ -608,7 +608,7 @@ class Menu_Helper {
 	/**
 	 * Add a back to post option in the admin bar.
 	 *
-	 * @param WP_Admin_Bar $admin_bar Admin bar reference.
+	 * @param \WP_Admin_Bar $admin_bar Admin bar reference.
 	 */
 	public function admin_bar_menu_back_to_post( $admin_bar ) {
 		// Only load on singular and page types.
@@ -637,7 +637,7 @@ class Menu_Helper {
 	/**
 	 * Add option group for preview overlays.
 	 *
-	 * @param WP_Admin_Bar $admin_bar Admin bar reference.
+	 * @param \WP_Admin_Bar $admin_bar Admin bar reference.
 	 */
 	public function admin_bar_menu_preview_overlay( $admin_bar ) {
 		// Only load on singular and page types.
@@ -665,8 +665,8 @@ class Menu_Helper {
 			array(
 				'id'     => 'wpac-menu-helper-preview-overlay-label',
 				'parent' => 'wpac-menu-helper',
-				'title'  => '<span style="font-weight: 900;">' . __( 'Overlay Preview', 'comment-edit-pro' ) . '</span>',
-				'href'   => false,
+				'title'  => '<span style="font-weight: 900;">' . __( 'Overlay Preview', 'wp-ajaxify-comments' ) . '</span>',
+				'href'   => '',
 			)
 		);
 
@@ -711,13 +711,13 @@ class Menu_Helper {
 		$nonce   = filter_input( INPUT_GET, 'nonce', FILTER_DEFAULT );
 		$post_id = filter_input( INPUT_GET, 'post_id', FILTER_VALIDATE_INT );
 		if ( ! wp_verify_nonce( $nonce, 'sce_shortcut_open_comments' . $post_id ) || ! $post_id ) {
-			wp_die( esc_html__( 'Invalid nonce.', 'sce-comment-shortcuts' ) );
+			wp_die( esc_html__( 'Invalid nonce.', 'wp-ajaxify-comments' ) );
 		}
 
 		// Open comments for the post.
 		$post = get_post( $post_id );
 		if ( ! $post ) {
-			wp_die( esc_html__( 'Invalid post.', 'sce-comment-shortcuts' ) );
+			wp_die( esc_html__( 'Invalid post.', 'wp-ajaxify-comments' ) );
 		}
 		$post->comment_status = 'open';
 		wp_update_post( $post );
@@ -737,13 +737,13 @@ class Menu_Helper {
 		$nonce   = filter_input( INPUT_GET, 'nonce', FILTER_DEFAULT );
 		$post_id = filter_input( INPUT_GET, 'post_id', FILTER_VALIDATE_INT );
 		if ( ! wp_verify_nonce( $nonce, 'sce_shortcut_close_comments' . $post_id ) || ! $post_id ) {
-			wp_die( esc_html__( 'Invalid nonce.', 'sce-comment-shortcuts' ) );
+			wp_die( esc_html__( 'Invalid nonce.', 'wp-ajaxify-comments' ) );
 		}
 
 		// Close comments for the post.
 		$post = get_post( $post_id );
 		if ( ! $post ) {
-			wp_die( esc_html__( 'Invalid post.', 'sce-comment-shortcuts' ) );
+			wp_die( esc_html__( 'Invalid post.', 'wp-ajaxify-comments' ) );
 		}
 		$post->comment_status = 'closed';
 		wp_update_post( $post );

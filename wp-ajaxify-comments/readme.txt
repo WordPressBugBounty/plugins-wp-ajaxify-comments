@@ -1,9 +1,9 @@
-=== Ajaxify Comments - Ajax and Lazy Loading Comments ===
+﻿=== Ajaxify Comments - Ajax and Lazy Loading Comments ===
 Contributors: ronalfy
 Tags: AJAX, comments, lazy load, errors, refresh
 Requires at least: 6.5
 Tested up to: 7.1
-Stable tag: 3.2.2
+Stable tag: 3.2.3
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -125,6 +125,14 @@ More than likely you need to set up your selectors. <a href="https://docs.dlxplu
 Lazy Loading is an advanced topic, but we've put together <a href="https://docs.dlxplugins.com/v/ajaxify-comments/advanced-topics/lazy-loading-comments">a guide to help you understand how to enable lazy loading</a>.
 
 == Changelog ==
+
+= 3.2.3 =
+* Released 2026-11-24
+* Bug fix: Fixing AJAX validation-error response handling.
+* Bug fix: Preserving threaded reply state across comment refresh.
+* Bug fix: Confetti plugin integration now fires confetti when a comment is posted (Confetti 2.x compatibility).
+* Bug fix: Aligning the snackbar icon with its message text in the admin.
+* Updating dependencies and remediating patchable security alerts.
 
 = 3.2.2 =
 * Released 2026-04-05
